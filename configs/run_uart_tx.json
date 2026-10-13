@@ -1,0 +1,16 @@
+{
+  "name": "uart_tx",
+  "module": "uart_tx",
+  "ref_module": "uart_tx_ref",
+  "spec": "{ROOT}/specs/uart_tx/spec.md",
+  "ref": "{ROOT}/specs/uart_tx/ref.v",
+  "verify_cmd": "bash /opt/asic/work/chipflow/fpga_llm_rtl_loop/uart_tx/verify.sh {V}",
+  "formal_sby": "[options]\nmode bmc\ndepth 16\n\n[engines]\nsmtbmc z3\n\n[script]\nread_verilog -formal /opt/asic/work/chipflow/fpga_llm_rtl_loop/uart_tx/ref.v\nread_verilog -formal {V}\nread_verilog -formal -sv /opt/asic/work/chipflow/fpga_llm_rtl_loop/uart_tx/equiv_wrap.sv\nprep -top equiv_wrap\n\n[files]\n/opt/asic/work/chipflow/fpga_llm_rtl_loop/uart_tx/ref.v\n{V}\n/opt/asic/work/chipflow/fpga_llm_rtl_loop/uart_tx/equiv_wrap.sv",
+  "formal_sby_fallback": "[options]\nmode bmc\ndepth 12\n\n[engines]\nsmtbmc z3\n\n[script]\nread_verilog -formal /opt/asic/work/chipflow/fpga_llm_rtl_loop/uart_tx/ref.v\nread_verilog -formal {V}\nread_verilog -formal -sv /opt/asic/work/chipflow/fpga_llm_rtl_loop/uart_tx/equiv_wrap.sv\nprep -top equiv_wrap\n\n[files]\n/opt/asic/work/chipflow/fpga_llm_rtl_loop/uart_tx/ref.v\n{V}\n/opt/asic/work/chipflow/fpga_llm_rtl_loop/uart_tx/equiv_wrap.sv",
+  "api_base": "https://maas-api.unisound.com/v1/chat/completions",
+  "model": "u2-flash",
+  "api_key_env": "UNI_API_KEY",
+  "samples": 3,
+  "max_rounds": 4,
+  "out": "{ROOT}/evidence/uart_tx"
+}

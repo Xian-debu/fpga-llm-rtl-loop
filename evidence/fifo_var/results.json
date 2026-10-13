@@ -1,0 +1,85 @@
+[
+  {
+    "sample": "s0",
+    "model": "u2-flash",
+    "rounds": [
+      {
+        "r": 1,
+        "status": "PASS",
+        "tok": 3186,
+        "sec": 42.8,
+        "lint": "ok",
+        "area_um2": null,
+        "cells": 317,
+        "formal": "PASS",
+        "formal_mode": "bmc"
+      }
+    ],
+    "tokens": 3186,
+    "status": "PASS",
+    "passed_round": 1,
+    "file": "fifo_var/gen/s0_r1.v",
+    "formal": "PASS",
+    "formal_mode": "bmc"
+  },
+  {
+    "sample": "s1",
+    "model": "u2-flash",
+    "rounds": [
+      {
+        "r": 1,
+        "status": "COMPILE",
+        "tok": 8938,
+        "sec": 193.7,
+        "lint": "warn"
+      },
+      {
+        "r": 2,
+        "status": "COMPILE",
+        "tok": 9405,
+        "sec": 122.6,
+        "lint": "warn"
+      },
+      {
+        "r": 3,
+        "status": "PASS",
+        "tok": 6266,
+        "sec": 21.4,
+        "lint": "ok",
+        "area_um2": null,
+        "cells": 321,
+        "formal": "PASS",
+        "formal_mode": "bmc"
+      }
+    ],
+    "tokens": 24609,
+    "status": "PASS",
+    "passed_round": 3,
+    "file": "fifo_var/gen/s1_r3.v",
+    "formal": "PASS",
+    "formal_mode": "bmc"
+  },
+  {
+    "sample": "s2",
+    "model": "u2-flash",
+    "rounds": [
+      {
+        "r": 1,
+        "status": "PASS",
+        "tok": 8938,
+        "sec": 143.6,
+        "lint": "ok",
+        "area_um2": null,
+        "cells": 317,
+        "formal": "PASS",
+        "formal_mode": "bmc"
+      }
+    ],
+    "tokens": 8938,
+    "status": "PASS",
+    "passed_round": 1,
+    "file": "fifo_var/gen/s2_r1.v",
+    "formal": "PASS",
+    "formal_mode": "bmc"
+  }
+]

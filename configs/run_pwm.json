@@ -1,0 +1,16 @@
+{
+  "name": "pwm",
+  "module": "pwm",
+  "ref_module": "pwm_ref",
+  "spec": "{ROOT}/specs/pwm/spec.md",
+  "ref": "{ROOT}/specs/pwm/ref.v",
+  "verify_cmd": "bash /opt/asic/work/chipflow/fpga_llm_rtl_loop/pwm/verify.sh {V}",
+  "formal_sby": "[options]\nmode bmc\ndepth 270\n\n[engines]\nsmtbmc z3\n\n[script]\nread_verilog -formal /opt/asic/work/chipflow/fpga_llm_rtl_loop/pwm/ref.v\nread_verilog -formal {V}\nread_verilog -formal -sv /opt/asic/work/chipflow/fpga_llm_rtl_loop/pwm/equiv_wrap.sv\nprep -top equiv_wrap\n\n[files]\n/opt/asic/work/chipflow/fpga_llm_rtl_loop/pwm/ref.v\n{V}\n/opt/asic/work/chipflow/fpga_llm_rtl_loop/pwm/equiv_wrap.sv",
+  "formal_sby_fallback": "[options]\nmode bmc\ndepth 270\n\n[engines]\nsmtbmc z3\n\n[script]\nread_verilog -formal /opt/asic/work/chipflow/fpga_llm_rtl_loop/pwm/ref.v\nread_verilog -formal {V}\nread_verilog -formal -sv /opt/asic/work/chipflow/fpga_llm_rtl_loop/pwm/equiv_wrap.sv\nprep -top equiv_wrap\n\n[files]\n/opt/asic/work/chipflow/fpga_llm_rtl_loop/pwm/ref.v\n{V}\n/opt/asic/work/chipflow/fpga_llm_rtl_loop/pwm/equiv_wrap.sv",
+  "api_base": "https://maas-api.unisound.com/v1/chat/completions",
+  "model": "u2-flash",
+  "api_key_env": "UNI_API_KEY",
+  "samples": 4,
+  "max_rounds": 4,
+  "out": "{ROOT}/evidence/pwm"
+}

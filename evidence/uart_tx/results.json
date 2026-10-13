@@ -1,0 +1,82 @@
+[
+  {
+    "sample": "s0",
+    "model": "u2-flash",
+    "rounds": [
+      {
+        "r": 1,
+        "status": "PASS",
+        "tok": 8931,
+        "sec": 121.3,
+        "lint": "ok",
+        "area_um2": null,
+        "cells": 191,
+        "formal": "PASS",
+        "formal_mode": "bmc"
+      }
+    ],
+    "tokens": 8931,
+    "status": "PASS",
+    "passed_round": 1,
+    "file": "uart_tx/gen/s0_r1.v",
+    "formal": "PASS",
+    "formal_mode": "bmc"
+  },
+  {
+    "sample": "s1",
+    "model": "u2-flash",
+    "rounds": [
+      {
+        "r": 1,
+        "status": "PASS",
+        "tok": 8931,
+        "sec": 130.8,
+        "lint": "ok",
+        "area_um2": null,
+        "cells": 187,
+        "formal": "FAIL",
+        "formal_mode": "bmc"
+      },
+      {
+        "r": 2,
+        "status": "PASS",
+        "tok": 9996,
+        "sec": 155.0,
+        "lint": "ok",
+        "area_um2": null,
+        "cells": 209,
+        "formal": "PASS",
+        "formal_mode": "bmc"
+      }
+    ],
+    "tokens": 18927,
+    "status": "PASS",
+    "passed_round": 2,
+    "file": "uart_tx/gen/s1_r2.v",
+    "formal": "PASS",
+    "formal_mode": "bmc"
+  },
+  {
+    "sample": "s2",
+    "model": "u2-flash",
+    "rounds": [
+      {
+        "r": 1,
+        "status": "PASS",
+        "tok": 8931,
+        "sec": 137.7,
+        "lint": "ok",
+        "area_um2": null,
+        "cells": 184,
+        "formal": "PASS",
+        "formal_mode": "bmc"
+      }
+    ],
+    "tokens": 8931,
+    "status": "PASS",
+    "passed_round": 1,
+    "file": "uart_tx/gen/s2_r1.v",
+    "formal": "PASS",
+    "formal_mode": "bmc"
+  }
+]

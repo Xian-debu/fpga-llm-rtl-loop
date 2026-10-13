@@ -1,0 +1,16 @@
+{
+  "name": "fifo_var",
+  "module": "fifo_var",
+  "ref_module": "fifo_var_ref",
+  "spec": "{ROOT}/specs/fifo_var/spec.md",
+  "ref": "{ROOT}/specs/fifo_var/ref.v",
+  "verify_cmd": "bash /opt/asic/work/chipflow/fpga_llm_rtl_loop/fifo_var/verify.sh {V}",
+  "formal_sby": "[options]\nmode bmc\ndepth 12\n\n[engines]\nsmtbmc z3\n\n[script]\nread_verilog -formal /opt/asic/work/chipflow/fpga_llm_rtl_loop/fifo_var/ref.v\nread_verilog -formal {V}\nread_verilog -formal -sv /opt/asic/work/chipflow/fpga_llm_rtl_loop/fifo_var/equiv_wrap.sv\nprep -top equiv_wrap\n\n[files]\n/opt/asic/work/chipflow/fpga_llm_rtl_loop/fifo_var/ref.v\n{V}\n/opt/asic/work/chipflow/fpga_llm_rtl_loop/fifo_var/equiv_wrap.sv",
+  "formal_sby_fallback": "[options]\nmode bmc\ndepth 8\n\n[engines]\nsmtbmc z3\n\n[script]\nread_verilog -formal /opt/asic/work/chipflow/fpga_llm_rtl_loop/fifo_var/ref.v\nread_verilog -formal {V}\nread_verilog -formal -sv /opt/asic/work/chipflow/fpga_llm_rtl_loop/fifo_var/equiv_wrap.sv\nprep -top equiv_wrap\n\n[files]\n/opt/asic/work/chipflow/fpga_llm_rtl_loop/fifo_var/ref.v\n{V}\n/opt/asic/work/chipflow/fpga_llm_rtl_loop/fifo_var/equiv_wrap.sv",
+  "api_base": "https://maas-api.unisound.com/v1/chat/completions",
+  "model": "u2-flash",
+  "api_key_env": "UNI_API_KEY",
+  "samples": 3,
+  "max_rounds": 4,
+  "out": "{ROOT}/evidence/fifo_var"
+}

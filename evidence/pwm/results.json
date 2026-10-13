@@ -1,0 +1,108 @@
+[
+  {
+    "sample": "s0",
+    "model": "u2-flash",
+    "rounds": [
+      {
+        "r": 1,
+        "status": "PASS",
+        "tok": 1795,
+        "sec": 26.1,
+        "lint": "ok",
+        "area_um2": null,
+        "cells": 88,
+        "formal": "PASS",
+        "formal_mode": "bmc"
+      }
+    ],
+    "tokens": 1795,
+    "status": "PASS",
+    "passed_round": 1,
+    "file": "pwm/gen/s0_r1.v",
+    "formal": "PASS",
+    "formal_mode": "bmc"
+  },
+  {
+    "sample": "s1",
+    "model": "u2-flash",
+    "rounds": [
+      {
+        "r": 1,
+        "status": "PASS",
+        "tok": 1882,
+        "sec": 25.4,
+        "lint": "ok",
+        "area_um2": null,
+        "cells": 88,
+        "formal": "PASS",
+        "formal_mode": "bmc"
+      }
+    ],
+    "tokens": 1882,
+    "status": "PASS",
+    "passed_round": 1,
+    "file": "pwm/gen/s1_r1.v",
+    "formal": "PASS",
+    "formal_mode": "bmc"
+  },
+  {
+    "sample": "s2",
+    "model": "u2-flash",
+    "rounds": [
+      {
+        "r": 1,
+        "status": "PASS",
+        "tok": 1744,
+        "sec": 21.2,
+        "lint": "ok",
+        "area_um2": null,
+        "cells": 88,
+        "formal": "PASS",
+        "formal_mode": "bmc"
+      }
+    ],
+    "tokens": 1744,
+    "status": "PASS",
+    "passed_round": 1,
+    "file": "pwm/gen/s2_r1.v",
+    "formal": "PASS",
+    "formal_mode": "bmc"
+  },
+  {
+    "sample": "s3",
+    "model": "u2-flash",
+    "rounds": [
+      {
+        "r": 1,
+        "status": "COMPILE",
+        "tok": 1588,
+        "sec": 63.7,
+        "lint": "warn"
+      },
+      {
+        "r": 2,
+        "status": "COMPILE",
+        "tok": 2896,
+        "sec": 79.0,
+        "lint": "warn"
+      },
+      {
+        "r": 3,
+        "status": "PASS",
+        "tok": 1186,
+        "sec": 20.0,
+        "lint": "ok",
+        "area_um2": null,
+        "cells": 88,
+        "formal": "PASS(bmc)",
+        "formal_mode": "bmc-fallback"
+      }
+    ],
+    "tokens": 5670,
+    "status": "PASS",
+    "passed_round": 3,
+    "file": "pwm/gen/s3_r3.v",
+    "formal": "PASS(bmc)",
+    "formal_mode": "bmc-fallback"
+  }
+]

@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+
+# Local runtime artifacts
+*.log
+*.tmp
+*.out
+run/
+
+# Credentials
+.env
+credentials.yaml
